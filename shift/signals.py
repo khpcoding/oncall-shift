@@ -26,7 +26,7 @@ def send_telegram_message(message):
     
 def job(shift):
     if shift.date == timezone.localdate():
-        message = f"شیف ساعت {shift.start_time} تا {shift.end_time} شیف کاری آقای {shift.name} هست"
+        message = f" The Shift {shift.start_time} has been delivered to: {shift.name} "
         send_telegram_message(message)
 
 def schedule_job(shift):
